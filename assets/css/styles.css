@@ -96,8 +96,9 @@ footer {
 @media screen and (max-width: 650px) {
   #btn {
     height: 50px;
-    width: 100px;
-    font-size: 1.1rem;
+    width: 80px;
+    height: 30px;
+    font-size: 1rem;
   }
   #textArea {
     margin: 30px;
@@ -105,6 +106,9 @@ footer {
     height: 50px;
   }
   .photo {
-    width: 38%;
+    width: 32%;
+  }
+  .summary {
+    width: 90%;
   }
 }
