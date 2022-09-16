@@ -1,0 +1,110 @@
+body {
+  background-color: white;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  margin: 30px;
+  font-family: mali;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  background-color: #74c5ebba;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.box-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  width: 35%;
+  border-radius: 10px;
+}
+
+#textArea {
+  border: 1px solid black;
+  margin: 30px;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#btn {
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+#btn:hover {
+  background-color: whitesmoke;
+}
+
+h2 {
+  text-decoration: underline;
+  margin-top: 30px;
+  font-style: bold;
+  font-family: "Times New Roman";
+}
+.summary {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  width: 70%;
+  font-family: amiri;
+}
+
+.categories {
+  margin-bottom: 20px;
+}
+
+.categories p {
+  margin: 5px;
+  font-size: 1.2rem;
+  font-family: amiri;
+}
+.city-score {
+  font-family: amiri;
+  font-size: 1.5rem;
+  color: red;
+  margin-bottom: 25px;
+}
+
+footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  #btn {
+    height: 50px;
+    width: 100px;
+    font-size: 1.1rem;
+  }
+  #textArea {
+    margin: 30px;
+    width: 150px;
+    height: 50px;
+  }
+  .photo {
+    width: 38%;
+  }
+}
