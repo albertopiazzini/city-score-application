@@ -105,6 +105,8 @@ footer {
     width: 80px;
     height: 30px;
     font-size: 0.5rem;
+    background-color: whitesmoke;
+    color: black;
   }
   #textArea {
     margin: 30px;
