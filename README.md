@@ -31,7 +31,7 @@ Information included is a little summary and these scores of:
 <li>Outdoors</li>
 </ul>
 
-<h3> About the code </h3> 
+<h2> About the code </h2> 
 
 In this code you can see my first approach to an API.
 
