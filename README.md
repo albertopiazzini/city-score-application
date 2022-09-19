@@ -1,6 +1,6 @@
 # City Score Application 
 
-Hello, this is my third project on <a href="https://www.start2impact.it"> Start2Impact University </a> \n
+Hello, this is my third project on <a href="https://www.start2impact.it"> Start2Impact University </a> <br>
 
 This app allows you to check the quality of life of various cities.
 
