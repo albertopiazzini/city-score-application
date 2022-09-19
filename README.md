@@ -8,7 +8,7 @@ You can try  <a href="https://steady-sawine-9a854c.netlify.app/"> HERE </a> on N
 
 <h2> How to use </h2> 
 
-the application is very simple to use: enter the city of your interest in the search box, then by pressing the button or enter the data of that city will appear.
+The application is very simple to use: enter the city of your interest in the search box, then by pressing the button or enter the data of that city will appear.
 
 Information included is a little summary and these scores of:
 <u>
