@@ -27,6 +27,6 @@ Information included is a little summary and these scores of:
 <li>Taxation</li>
 <li>Internet Access</li>
 <li>Leisure & Culture</li>
-<li><li>Tolerance</li>
+<li>Tolerance</li>
 <li>Outdoors</li>
 </ul>
