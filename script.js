@@ -23,7 +23,10 @@ const showCategories = function () {
   title.innerHTML = "";
   fetch(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`)
     .then((response) => {
-      if (!response.ok) throw new Error(`City not found (${response.status})`);
+      if (!response.ok)
+        throw new Error(
+          `City not found (the name must be written in English, thanks)`
+        );
       return response.json();
     })
     .then((data) => {
