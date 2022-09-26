@@ -4,7 +4,7 @@ Hello, this is my third project on <a href="https://www.start2impact.it"> Start2
 
 This app allows you to check the quality of life of various cities.
 
-You can try  <a href="https://steady-sawine-9a854c.netlify.app/"> HERE </a> on Netlify.
+You can try  <a href="https://cityscore-s2i-albertopiazzini.netlify.app/"> HERE </a> on Netlify.
 
 <h2> How to use </h2> 
 
