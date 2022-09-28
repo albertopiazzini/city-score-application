@@ -4,9 +4,9 @@
 const btn = document.querySelector("#btn");
 const textArea = document.querySelector("#textArea");
 const sum = document.querySelector(".summary");
-const categories = document.querySelector(".categories");
-const title = document.querySelector(".title");
-const cityScore = document.querySelector(".city-score");
+const categories = document.querySelector(".categories-grid");
+const cityName = document.querySelector(".city-name");
+const cityScore = document.querySelector(".score-tot");
 let city;
 const box = document.querySelector(".box");
 
@@ -20,7 +20,9 @@ const correctInput = function (input) {
 
 const showCategories = function () {
   city = correctInput(textArea.value);
-  title.innerHTML = "";
+  cityName.innerHTML = "";
+  cityScore.innerHTML = "";
+
   fetch(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`)
     .then((response) => {
       if (!response.ok)
@@ -30,30 +32,49 @@ const showCategories = function () {
       return response.json();
     })
     .then((data) => {
-      title.innerHTML = city.toUpperCase();
+      cityName.innerHTML = `${city.toUpperCase()}: `;
+      cityScore.innerHTML = `${data.teleport_city_score.toFixed(1)}`;
       categories.innerHTML = "";
-      cityScore.innerHTML = "";
 
-      cityScore.innerHTML = data.teleport_city_score.toFixed(1);
-      data.categories.forEach((el, index) => {
-        const html = `<p style="color:${el.color};"> ${
-          el.name
-        }: ${el.score_out_of_10.toFixed(1)}</p>`;
-        categories.insertAdjacentHTML("beforeend", html);
-      });
-      sum.innerHTML = "";
-      sum.insertAdjacentHTML("afterbegin", data.summary);
-      cityScore.innerHTML = `CITY SCORE: ${data.teleport_city_score.toFixed(
-        1
-      )}`;
-      title.scrollIntoView({ behavior: "smooth" });
+      if (data.categories) {
+        data.categories.forEach((el, index) => {
+          const html = `<div class="box-cat">
 
-      textArea.value = "";
+          <div class="title-vote">  <span class="vote" style = "background-color: ${
+            el.color
+          }"> ${el.score_out_of_10.toFixed(1)} </span> ${el.name} </div>
+          
+          <div class="full-bar">
+            <div class="percent-bar" style = "background-color: ${
+              el.color
+            }; width: ${el.score_out_of_10.toFixed(1) * 10}%"></div>
+          </div>
+  
+        </div>`;
+
+          categories.insertAdjacentHTML("beforeend", html);
+        });
+        sum.innerHTML = "";
+        if (data.summary) {
+          sum.insertAdjacentHTML("afterbegin", data.summary);
+        } else {
+          sum.innerHTML = "";
+        }
+
+        cityName.scrollIntoView({ behavior: "smooth" });
+
+        textArea.value = "";
+      } else {
+        throw new Error(`Something went wrong 💥 Retry please`);
+      }
     })
     .catch((err) => {
-      sum.innerHTML = `<p style='color:red'>${err}</p>`;
-      categories.innerHTML = "";
       cityScore.innerHTML = "";
+      cityName.innerHTML = "";
+      sum.innerHTML = "";
+      categories.innerHTML = "";
+
+      sum.innerHTML = `<p style='color:red; font-size:1.5rem;''>${err}</p>`;
     });
 };
 

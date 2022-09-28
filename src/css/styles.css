@@ -1,5 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
+  font-family: sans-serif;
 }
 
 .app {
@@ -13,7 +20,7 @@ body {
 
 h1 {
   margin: 30px;
-  font-family: mali;
+  font-family: amiri;
   font-size: 2.3rem;
 }
 
@@ -74,29 +81,92 @@ h2 {
 .summary {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  width: 70%;
+  width: 80%;
   font-family: amiri;
 }
 
-.categories {
-  margin-bottom: 20px;
+.categories-grid {
+  padding: 1rem;
+  margin: 2rem 0;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+}
+.box-cat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.categories p {
-  margin: 5px;
-  font-size: 1.2rem;
-  font-family: amiri;
-}
-.city-score {
-  font-family: amiri;
+.title-vote {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
-  color: red;
-  margin-bottom: 25px;
+  margin: 10px;
+  color: black;
+}
+
+.vote {
+  color: white;
+  border-radius: 100%;
+  margin: 10px;
+  margin-right: 30px;
+  padding: 15px;
+  text-align: center;
+  font-size: 2rem;
+}
+.full-bar {
+  background-color: beige;
+  height: 0.5rem;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.percent-bar {
+  width: 50%;
+  font-size: 1.5rem;
+  height: 100%;
+  border-radius: 10px;
+}
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: center;
+}
+
+.city-name {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+.score-tot {
+  color: black;
+
+  border-radius: 100%;
+  margin: 10px;
+  margin-right: 30px;
+  padding: 15px;
+  text-align: center;
+  font-size: 2rem;
 }
 
 footer {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 680px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 2rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
