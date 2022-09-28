@@ -170,6 +170,9 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+  h1 {
+    line-height: 45px;
+  }
   .app {
     margin: 5px;
   }

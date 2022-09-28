@@ -7,6 +7,7 @@ const sum = document.querySelector(".summary");
 const categories = document.querySelector(".categories-grid");
 const cityName = document.querySelector(".city-name");
 const cityScore = document.querySelector(".score-tot");
+const titleBox = document.querySelector(".title-box");
 let city;
 const box = document.querySelector(".box");
 
