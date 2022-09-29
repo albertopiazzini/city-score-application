@@ -12,17 +12,30 @@
   </head>
   <body>
     <div class="app">
-      <h1>Search a city and look at its quality of life</h1>
+      <h1>SEARCH A CITY AND FIND ITS QUALITY LIFE</h1>
       <div class="box">
-        <div class="box-search">
-          <input
-            type="text"
-            id="textArea"
-            class="input"
-            placeholder="Write here a city..."
-            required=""
-          />
-          <button type="submit" id="btn">Let's Go!</button>
+        <div class="description-box">
+          <div class="description">
+            <p>
+              Search a city to analyze its quality life info. The overall city
+              quality life score is calculated on a scale of 1 to 100. The
+              individual scores of the various categories are calculated on a
+              scale of 1 to 10.
+            </p>
+          </div>
+
+          <div class="box-search">
+            <input
+              type="text"
+              id="textArea"
+              class="input"
+              placeholder="City name..."
+              required=""
+            />
+            <button type="submit" id="btn">
+              <img src="src/img/search-icon.jpeg" class="icon-search" />
+            </button>
+          </div>
         </div>
         <img src="src/img/city.jpeg" alt="" class="photo" />
       </div>

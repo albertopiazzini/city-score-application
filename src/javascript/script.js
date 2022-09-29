@@ -20,6 +20,8 @@ const correctInput = function (input) {
 };
 
 const showCategories = function () {
+  cityScore.style.backgroundColor = "transparent";
+
   city = correctInput(textArea.value);
   cityName.innerHTML = "";
   cityScore.innerHTML = "";
@@ -35,6 +37,7 @@ const showCategories = function () {
     .then((data) => {
       cityName.innerHTML = `${city.toUpperCase()}: `;
       cityScore.innerHTML = `${data.teleport_city_score.toFixed(1)}`;
+      cityScore.style.backgroundColor = "rgb(0, 119, 255)";
       categories.innerHTML = "";
 
       if (data.categories) {
@@ -70,6 +73,7 @@ const showCategories = function () {
       }
     })
     .catch((err) => {
+      cityScore.style.backgroundColor = "transparent";
       cityScore.innerHTML = "";
       cityName.innerHTML = "";
       sum.innerHTML = "";
