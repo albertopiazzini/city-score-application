@@ -208,7 +208,7 @@ footer {
 @media screen and (max-width: 650px) {
   .description {
     margin: 10px;
-    width: 85%;
+    width: 90%;
   }
   h1 {
     line-height: 45px;
