@@ -208,7 +208,7 @@ footer {
 @media screen and (max-width: 650px) {
   .description {
     margin: 10px;
-    width: 400px;
+    width: 85%;
   }
   h1 {
     line-height: 45px;
@@ -221,11 +221,8 @@ footer {
     flex-direction: column-reverse;
   }
   #btn {
-    height: 40px;
-    width: 40px;
-
-    background-color: whitesmoke;
-    color: black;
+    height: 35px;
+    width: 35px;
   }
   #textArea {
     margin: 15px;
