@@ -212,6 +212,7 @@ footer {
   }
   h1 {
     line-height: 45px;
+    font-size: 2rem;
   }
   .app {
     margin: 5px;
