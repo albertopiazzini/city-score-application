@@ -38,8 +38,15 @@ const showCategories = function () {
     .then((data) => {
       errorBox.innerHTML = "";
       cityName.innerHTML = `${city.toUpperCase()}: `;
-      cityScore.innerHTML = `${data.teleport_city_score.toFixed(1)}`;
-      cityScore.style.backgroundColor = "rgb(0, 119, 255)";
+
+      if (data.teleport_city_score) {
+        cityScore.innerHTML = `${data.teleport_city_score.toFixed(1)}`;
+        cityScore.style.backgroundColor = "rgb(0, 119, 255)";
+      } else {
+        cityScore.innerHTML = "";
+        cityScore.style.backgroundColor = "transparent";
+      }
+
       categories.innerHTML = "";
 
       if (data.categories) {
