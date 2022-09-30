@@ -8,6 +8,7 @@ const categories = document.querySelector(".categories-grid");
 const cityName = document.querySelector(".city-name");
 const cityScore = document.querySelector(".score-tot");
 const titleBox = document.querySelector(".title-box");
+const errorBox = document.querySelector(".error");
 let city;
 const box = document.querySelector(".box");
 
@@ -35,6 +36,7 @@ const showCategories = function () {
       return response.json();
     })
     .then((data) => {
+      errorBox.innerHTML = "";
       cityName.innerHTML = `${city.toUpperCase()}: `;
       cityScore.innerHTML = `${data.teleport_city_score.toFixed(1)}`;
       cityScore.style.backgroundColor = "rgb(0, 119, 255)";
@@ -79,7 +81,7 @@ const showCategories = function () {
       sum.innerHTML = "";
       categories.innerHTML = "";
 
-      sum.innerHTML = `<p style='color:red; font-size:1.5rem;''>${err}</p>`;
+      errorBox.innerHTML = `<p style='color:red; font-size:1.5rem;''>${err}</p>`;
     });
 };
 
